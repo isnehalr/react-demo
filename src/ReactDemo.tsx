@@ -55,7 +55,7 @@ class ReactDemo extends React.Component<IDemoProps,IDemoState> {
                         <input type="text" className="form-control col-md-4" name="designation" value={this.state.designation}  onChange={this.handleChange} />
                    
                     <label>Company : </label> 
-                        <input type="text" className="form-control col-md-4" name="company" value={this.state.company}  onChange={this.handleChange} />
+                        <input type="text" className="form-control col-md-4" name="company" value={this.state.company}  onChange={this.handleChange} /> <br />
 
                 <Button label="Submit" click={this.handleSubmit}/> <br/><br/>
 
@@ -95,7 +95,6 @@ class ReactDemo extends React.Component<IDemoProps,IDemoState> {
     handleChange = (e) => {
         const { name, value } = e.target;
 
-        let {userinfo} = this.state
         this.setState({ 
         [name] : value 
         } as IDemoState)
