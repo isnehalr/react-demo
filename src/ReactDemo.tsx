@@ -46,23 +46,24 @@ class ReactDemo extends React.Component<IDemoProps,IDemoState> {
             <React.Fragment>
                 <h2 className="container">React App Demo</h2>
                 <h4 className="container">Add Users : </h4>
-                
                 <form className="container">
+                    
                    <label> Name : </label>
                         <input type="text" className="form-control col-md-4" name="name" value={this.state.name} onChange={this.handleChange}/>
-                   
+                 
                    <label> Designation : </label>
                         <input type="text" className="form-control col-md-4" name="designation" value={this.state.designation}  onChange={this.handleChange} />
-                   
+                
                     <label>Company : </label> 
-                        <input type="text" className="form-control col-md-4" name="company" value={this.state.company}  onChange={this.handleChange} /> <br />
+                        <input type="text" className="form-control col-md-4" name="company" value={this.state.company}  onChange={this.handleChange} /><br/>
+                
 
                 <Button label="Submit" click={this.handleSubmit}/> <br/><br/>
 
                 {this.state.isSubmit === true? <div className="alert alert-success col-md-4">{this.state.message}</div> : "" }<br/><br/>
                 
                 <Button label="Get Users" click={this.handleGetItems}/>
-
+                
                 </form> <br />
 
                 <h3 className="container">List of Users:</h3>
@@ -87,7 +88,6 @@ class ReactDemo extends React.Component<IDemoProps,IDemoState> {
                         )}
                     </tbody>
                 </table>
-
             </React.Fragment>
         )
     }
